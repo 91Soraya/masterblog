@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Add new blog post</title>
+</head>
+<body>
+  <form action="/add" method="post">
+    <label for="author">Author:</label>
+    <br><br>
+    <input type="text" id="author" name="author" required>
+    <br><br>
+    <label for="title">Title:</label>
+    <br><br>
+    <input type="text" id="title" name="title" required>
+    <br><br>
+    <label for="content">Content:</label>
+    <br><br>
+      <textarea type="text" id="content" name="content" placeholder="Write something.." required></textarea>
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
+</html>
