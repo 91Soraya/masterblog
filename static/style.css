@@ -10,6 +10,20 @@ h1 {
     color: #4F4F4F;
 }
 
+.redirect {
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    font-size: small;
+    text-decoration: none;
+    color: #00203FFF;
+}
+
+.redirect:hover {
+    font-size: medium;
+    color: #2C5F2D;
+}
+
 .post {
     background-color: #FFF;
     border: 1px solid #DDD;

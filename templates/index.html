@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Welcome to my masterblog!</h1>
+    <a href="{{ 'add' }}" class="redirect">Add a new blog post</a>
     {% for blog in posts %}
     <div class="post">
         <h2>{{ blog["title"] }}</h2>
