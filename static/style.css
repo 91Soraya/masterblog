@@ -10,18 +10,18 @@ h1 {
     color: #4F4F4F;
 }
 
-.redirect {
+.add {
     padding: 5px;
     margin: 5px;
     display: inline-block;
-    font-size: small;
-    text-decoration: none;
+    font-size: big;
+    text-decoration: underline;
     color: #00203FFF;
 }
 
-.redirect:hover {
+.add:hover {
     font-size: medium;
-    color: #2C5F2D;
+    color: red;
 }
 
 .post {
@@ -77,3 +77,17 @@ input[type=submit]:hover {
     color: black;
 }
 
+button:hover {
+    color: red;
+    cursor: pointer;
+}
+
+button a:hover {
+    color: red;
+    cursor: pointer;
+}
+
+button, button a {
+    color: black;
+    font-size: big;
+}

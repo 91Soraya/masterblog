@@ -46,11 +46,7 @@ def add():
             for post in blog_posts:
                 all_posts.append(post)
 
-        new_post = {}
-        new_post["id"] = new_id
-        new_post["author"] = author
-        new_post["title"] = title
-        new_post["content"] = content
+        new_post = {"id": new_id, "author": author, "title": title, "content": content}
         all_posts.append(new_post)
 
         with open("blog_posts.json", "w") as write_file:
