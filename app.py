@@ -47,6 +47,22 @@ def add():
         return redirect(url_for("index"))
     return render_template("add.html")
 
+@app.route('/delete/<int:post_id>', methods=['GET', 'POST'])
+def delete(post_id):
+    updated_posts = []
+    if request.method == 'POST':
+        with open("blog_posts.json", "r") as read_file:
+            blog_posts = json.load(read_file)
+            for post in blog_posts:
+                if post_id == post["id"]:
+                    continue
+                updated_posts.append(post)
+
+    with open("blog_posts.json", "w") as write_file:
+        json.dump(updated_posts, write_file)
+
+    return redirect(url_for('index'))
+
 
 
 
