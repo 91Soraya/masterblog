@@ -11,12 +11,13 @@
     <a href="{{ 'add' }}" class="redirect">Add a new blog post</a>
     {% for blog in posts %}
     <div class="post">
-        <h2>{{ blog["title"] }}</h2>
-        <p><em>Written by: {{ blog["author"] }}</em></p>
-        <p>{{ blog["content"] }}</p>
-        <form method="POST" action="/delete/{{ blog['id'] }}">
+        <h2>{{ blog.title }}</h2>
+        <p><em>Written by: {{ blog.author }}</em></p>
+        <p>{{ blog.content }}</p>
+        <form method="POST" action="/delete/{{ blog.id }}">
             <button type="submit">Delete</button>
         </form>
+        <button><a href="{{ url_for('update', post_id=blog.id) }}" class="update">Update</a></button>
     </div>
     {% endfor %}
 </body>
